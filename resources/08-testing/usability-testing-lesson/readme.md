@@ -71,17 +71,11 @@ Now, before we switch to the guidelines how to write and conduct usability tests
   <a href="screenshots/long_password.png"><img src="screenshots/long_password.png" height="300" /></a> <a href="screenshots/rate_issue.png"><img src="screenshots/rate_issue.png" height="300" /></a>
 </p>
 
-> Instructor Note: Go over the following issues.
 
->Image 1: Floating Action Bar overlays other elements of the screen. It is a better practice to make all the elements occupy its own space in the app and not appear on top of other elements. As an alternative, the FAB functionality could be relocated to the menu options.
 
-> Image 2: FAB issue (look image 1). The grid view looks very disproportionate. The layout could be changed to a list (Recycler View) of separate cards (Card View).
 
-> Image 3: Color issue. Two orange circles are located next to each other. There are a lot of colors in the palette that could be used. It is better to make them all unique or provide some symmetric allocation.
 
-> Image 4: The type of the password is very weird. There are a lot of conditions set to satisfy. Such password will be hard to remember for users. It may be very annoying to come up with the right password.
 
-> Image 5: Never interrupt users asking for irrelevant information when users are navigating in your app. If your app is really awesome, people will leave a comment on the page in Google Play Store. If you constantly interrupt users and force them to take actions they don't want to spend their time on, you risk to lose them.
 
 ## Introduction: Space allocation (10 mins)  
 
@@ -97,10 +91,7 @@ Look at the screenshot and comment on strong and week sides of the layouts on di
   <a href="screenshots/bad_tablet_ui.png"><img src="screenshots/bad_tablet_ui.png" height="300" /></a> <a href="screenshots/good_tablet_ui.jpeg"><img src="screenshots/good_tablet_ui.jpeg" height="300" /></a>
 </p>
 
-> Instructor Note: Go over the following issues:
 
-> Image 1: there is a lot of wasted space between icons. Bad UI design. All the icons could be united in one listView/recyclerView and put on the left side of the screen. The right part could be occupied with other widgets.  
-> Image 2: the right allocation of the ui elements. No unused space.
 
 ## Introduction: Conducting tests (10 mins)  
 

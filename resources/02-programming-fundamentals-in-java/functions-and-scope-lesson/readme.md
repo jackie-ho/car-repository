@@ -36,7 +36,6 @@ competencies: Programming fundamentals in Java
 
 Functions are essential to write Java and keep the code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
-> TODO Give relevance, background, a funny story
 
 ## Introduction: Writing Functions and Languages (15 mins)
 
@@ -99,7 +98,6 @@ In the Java programming language, every application must contain a main method w
 public static void main(String[] args)
 ```
 
-> Instructor Note: Consider writing the main method signature on the board, so you can underline and point to things (modifiers, parameters) as you go through the following.
 
 The modifiers public and static can be written in either order (public static or static public), but the convention is to use public static as shown above. You can name the argument anything you want, but most programmers choose "args" or "argv".
 
@@ -119,14 +117,12 @@ java MyApp arg1 arg2
 
 Each string in the array is called a command-line argument. Command-line arguments let users affect the operation of the application without recompiling it.
 
->Check: What does an `entry point` mean?
 
 
 ## Demo: Let's break it down (15 mins)
 
 Let's look at what the parts of this method do. Let's start with the basics, which we covered a bit in explaining the main method..
 
-> Instructor Note: Write method on the board (or add body to main method signature, at the appropriate time) and underline and label each part as you go through the following sections.
 
 ```java
 public                     void            interestingMethod(  String input  )     throws IOException
@@ -159,7 +155,6 @@ Non-Access Modifiers include:
 
 We'll explain more of what all these keywords mean in later lessons.  For now, use `public`!
 
->Instructor Note: Refer back to main method and point out `static` modifier. Perhaps eliminate static from a method and point out the Lint error **
 
 Any method that is called from within a static context must also be static. So, for all methods, for now use, `public static`. Again, we'll explain more what this means later.
 
@@ -168,7 +163,6 @@ Any method that is called from within a static context must also be static. So, 
 
 A method can return a value, but the type of that returned data must be specified so that the calling function knows what to do with it.
 
->Instructor Note: Invite students to code along if they wish. Create a new java program, using the given console template from IntelliJ, or create a basic class with an inner main method. Then code the following two methods.  Use the commented out print statements to explain local scope.
 
 The problem:
 
@@ -229,8 +223,6 @@ class Main {
   }
 ```
 
-> Instructor Note: Give an example of when it is appropriate to use a return type, and another example when a global variable is more appropriate.
-> Check: What are some data types a method could return? Why might you want to return a value from a method?  What is the naming convention for global variables and where do you put them?
 
 
 #### Method Name
@@ -275,7 +267,6 @@ public static void main(String[] args) {
 }
 ```
 
->Instructor Note: Emphasize the ability to reuse code without re-writing it. Remind students of the `DRY` principle.
 
 It is also possible to have a return type for an unknown number of arguments, which can be declared like so:
 ```java
@@ -302,7 +293,6 @@ This is where the main functionality of your method will be called.
 
 ## Guided Practice (15 min) - Code along
 
->Instructor Note: Take a look at the [solution-code](solution-code) and run the askAQuestion java program, so students have an idea what they will be creating.
 
 Let's work through the following example. The Scanner class we'll be creating will be required in the lab.
 
@@ -362,7 +352,6 @@ Wait, what if we actually want to be able to try again?
 
 Note, this is called **recursion** - a Recursive method calls itself. For those who are interested in Math, a resource is included that talks about some of the other ways to use recursion to solve basic algorithms.
 
->Instructor Note: Run the program and prove that it runs circularly.
 
 
 What if we want to exit out of the program?

@@ -26,7 +26,6 @@ competencies: Workflow
 - Be comfortable navigating between folders on the command line
 - Take a look at some simple keyboard shortcuts to practice: [CLI Shortcuts](https://gist.github.com/alexpchin/01caa027b825d5f98871)
 
-> Note: Much of this content will be review from the prework students completed before the course began. We'll be practicing and reviewing some of the things they've learned, and diving into some additional ways to customize their command line.
 
 
 ## What is a GUI (pronounced gooey)? Intro (5 mins)
@@ -108,7 +107,6 @@ Some examples of absolute path:
 Notice, all these paths started from `/` directory which is a root directory for every Linux/Unix machines.
 
 #### What is a relative path?
-> *Note:* Instructors – customize this lesson to demo with folders that you have present on your filesystem, or alternatively create a similar file structure on the fly.
 
 A relative path is a reference to a file or folder **relative** to the current position, or the present working directory(pwd). If we are in the folder `/a/b/` and we want to open the file that has the absolute path `/a/b/c/file.txt`, we can just type:
 
@@ -270,7 +268,6 @@ A few other helpful commands you can try on your own:
 
 ## UNIX permissions and Chmod - Intro (15 mins)
 
-> Note: Update the narrative to reflect your own OS.
 
 An OS is meant to serve many users, A user may correspond to a real-world person, but also a program that acts as a specific user. In my laptop OS, I am "Gerry" and with gerry goes a set of permissions and restrictions on all files and folders, But I can also act for some specific program as the user "www" which corresponds to the privileges necessary to operate the local web server. Every User on the OS has a User ID - the name "Gerry" or "www" is just an alias for a User ID.
 

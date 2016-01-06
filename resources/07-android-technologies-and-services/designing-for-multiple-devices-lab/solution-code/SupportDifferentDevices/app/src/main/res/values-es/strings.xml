@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <string name="app_name">DiferentesTeléfonos</string>
-  <string name="question">Quiere saber qué va a pasar en tres meses?</string>
-  <string name="click_me">Haga clic en me:)</string>
-  <string name="answer">Usted va a ser un impresionante desarrollador de Android! Sólo seguir
-    trabajando duro!</string>
-</resources>

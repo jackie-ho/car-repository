@@ -46,7 +46,6 @@ Constructors methods fire when an object is instantiated and their only purpose 
 
 ## Demo: What are classes? (10 minutes)
 
->Note: Explain the syntax here about how to create new objects and also the syntax of a class file.
 
 The paradigm of OOP allows programmers to compartmentalize specific bits and pieces of code so that we can reuse this code while also hiding parts of it within the each class. In the __Car__ example, we can create new Cars and give them different model names but have an internal concept of _speed_ that only the Car itself is aware.
 
@@ -73,13 +72,11 @@ Car mFirstCar = new Car("DeLorean");
 
 Lets have you guys try and write your own class.  
 
-> Instructor Note: Use a text editor to do this next part and as you write the class, try to elicit each line of syntax from members of the class.
 
 In your Documents folder, create a new text file with a text editor of your choice.
 
 In this file, create a new class using the syntax your learned above. Your class should be modeling a __Person__ object. Your __Person__ must have a name and age. The __Person__ can also have another __Person__ as its "child". All of these must be set during construction. Don't try to instantiate your __Person__ anywhere.
 
-> Note: sample correct code
 ``` java
 public class Person {
     int mAge;
@@ -97,7 +94,6 @@ Save this file as `Person.java` and note that the file must be named the same as
 
 Now open Terminal on Mac or Command Prompt on Windows then use the command `cd Documents` to get to your Documents folder. Then use `javac Person.java` to compile the file and you should see a _Person.class_ in your Documents folder if your class compiled correctly. If not, then there should be an error in your terminal window, see what its telling you and fix!
 
-> Check: Did anyone hit an error?
 
 In basic Java programs, you need a `static main()` method to be able to run the program, add one to your program with in your __Person__ `class` like this.
 
@@ -116,7 +112,6 @@ Inside of this method, instantiate a Person object with a child:
 	}
 ```
 
->Instructor Note: Students might have trouble with this because of the `null` needed. Good to pause, explain the next section and let them try again.
 
 ### Introduction: Getters and setters (5 minutes)
 In Java, there is a convention used called _getters and setters_. It is not a good idea to make _member variables_ public and so instead methods are defined to expose access.
@@ -147,7 +142,6 @@ public void setOwner(String name) {
 
 Take five minutes to finish getting `mAge` from your object.
 
-> Check: Ask a student to review their solution.
 
 
 ### Introduction: Anonymous Classes (5 mins)
@@ -175,7 +169,6 @@ Notice how we implemented this - it doesn't have a definite `class`, other then 
 
 Your turn: Implement `setOnItemClickListener` for a ListView that creates a Toast that says the position clicked on the list.
 
-> Instructor Note: Provide students with a project that has a ListView added to a layout.
 
 ### Conclusion (5 minutes)
 

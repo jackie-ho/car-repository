@@ -2,7 +2,6 @@
 
 # Our ADI Unit Projects
 
-> Globally, we have 4 Unit Projects in ADI, each building on top of skills learned previously to scaffold students' learning over the entire course.
 
 Our projects each have an objective, deliverables, and recommendations, and tie in to the overall competencies we focus on in each unit. Dive into the detailed project spec files located in each project directory to read more about each project and read more about our curriculum and resources [here](../resources).
 

@@ -34,7 +34,6 @@ _Before this lesson, instructors will need to:_
 
 ## Opening (5 mins)
 
-> Instructor Note: Review pre-work, projects, exit ticket, lesson objectives; describe real-world relevance or motivating example why this lesson is important
 
 ## Callbacks - Intro (5 mins)
 
@@ -48,7 +47,6 @@ A callback function, also known as a higher-order function, is a function that i
 
 Let's walk through a couple of examples of code that utilize callbacks:
 
-> Note: Be sure to walk through these code snippets slowly.
 
 ```javascript
 var element = document.getElementsByTagName("body")[0];
@@ -211,7 +209,6 @@ console.log(clientData.fullName);
 
 ## Independent Practice (15 mins)
 
-> ***Note:*** _This can be a pair programming activity or done independently._
 
 Open the [starter-code](starter-code) and try to work through both exercises with a partner.  Do your best!
 

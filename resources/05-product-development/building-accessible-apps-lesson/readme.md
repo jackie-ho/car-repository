@@ -67,7 +67,6 @@ Try the following:
 3. to scroll use two fingers
 4. to exit the TalkBack, scroll the settings window from the top using two fingers, go to Settings and disable TalkBack.
 
->  Instructor Note:  Make sure you demonstrate views like ```ImageButton```, ```ImageView```, ```CheckBox```, ```EditText```. Pay their attention that there is a sound feedback although the views do not have any captions. Let them know that they will learn how to make it work in the apps.
 
 ## Introduction: Labeling User Interface Elements (10 mins)  
 

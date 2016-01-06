@@ -107,7 +107,6 @@ Let's break this up:
 
 Using the [provided sample code](starter-code), which is filled with functions calling each other, let's add log statements to the code.
 
-> Instructor Note: The teacher will ask the students about expected output, what logs show, etc.
 
 ## Introduction: Displaying messages to the User (10 minutes)
 

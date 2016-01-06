@@ -2,7 +2,6 @@
 
 # Global Materials
 
-> _Use this folder to reference our baseline resources. Anyone is welcome to submit new lessons in the appropriate folders, or suggest changes to existing ones._
 
 Most of the materials in this folder are referenced in our baseline course plan on [Trello](https://trello.com/b/F1PpxTzE/adi-beta-program-curriculum). Take a look.  Lessons, labs, and other resources are organized by Standard in the appropriate subfolders.
 

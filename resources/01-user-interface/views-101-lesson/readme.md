@@ -140,7 +140,6 @@ Here's a more detailed example of a full xml layout:
 
 ```
 
-> Instructor Note: Show a screenshot of this view to the class.
 
 In this example, take note of the following:
 
@@ -158,7 +157,6 @@ Let's go over adding views and layouts in Android Studio. We will start off drag
 
 ## Independent Practice: Create your own layouts (20 minutes)
 
-> This should be done as a pair programming exercise.
 
 Provided the screenshot below of a simple view in an Android app, the teams will try to create the view on their own.
 

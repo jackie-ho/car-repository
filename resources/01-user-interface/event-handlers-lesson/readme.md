@@ -39,7 +39,6 @@ creator:
 
 There are two primary components to handling input events from the user. The first component is something called an event listener. These register a View to respond to a certain user action, or "event". They "listen" for an event to happen, such as a press on the screen. The second component is the event handler. Event handlers are the pieces of code that actually process and act on the events that were being listened for.
 
->Check: Ask the student to give examples of Views we've seen (ie Buttons) and how we've handled input events (ie onClick with a listener).
 
 <a name="introduction"></a>
 ## Introduction: Event Handlers (25 mins)
@@ -54,7 +53,6 @@ Extending a View or one of its subclasses allows you to directly implement the m
 
 As we discussed earlier, the other way to handle events are with the combination of event listeners and event handlers. Some common event listeners we see are onClickListener and onFocusChangeListener, which have the respective handlers onClick() and onFocusChange(). Event listeners are tied to existing View objects through methods such as setOnClickListener, which accepts an onClickListener, which in turns implements the onClick event. This flow is actually displayed visually in your code, which we will see in the upcoming demo.
 
-> Check: Ask the student to come up with some examples of custom views they think would be worth implementing, and what views they would extend to do it.
 
 
 <a name="demo"></a>
@@ -72,7 +70,6 @@ button.setOnLongClickListener(new View.OnLongClickListener() {
 });
 ```
 
-> Instructor Note: Ask the students what they think the event handler should be, and how it should be defined.
 
 Now we need to pass an OnLongClickListener object to the setOnLongClickListener method. We use the new keyword, and let Android Studio automatically provide the methods we must override. In this case, it provides the onLongClick method:
 
@@ -87,21 +84,18 @@ button.setOnLongClickListener(new View.OnLongClickListener() {
 ```
 As you can see, we take the action we want to do within the onLongClick method. All click listeners and event handlers follow this same basic flow, just with different names.
 
->Check: Ask the students to name the method to set the listener, what the listener is called, and the method that must be overridden for basic clicks on Buttons. (setOnClickListener,OnClickListener, onClick)
 
 <a name="guided-practice"></a>
 ## Guided Practice: Event Handlers -  Button enabling (15 mins)
 
 In this practice, you must test that the user has checked a checkbox in order to enable a button. If the button is unchecked, the button should disable again. This is used in systems such as registration forms where the user must agree to terms before they can register. Starter code is provided in the ButtonEnabling project.
 
-> Check: Were students able to successfully solve the problem or complete the task?
 
 <a name="ind-practice"></a>
 ## Independent Practice: Event Handlers (20 minutes)
 
 In this independent practice, you must implement click listeners for the provided eight buttons to either change the text color to the color indicated on the button, or the background color to the color indicated on the button. The buttons are arranged in columns with labels to determine whether it will change the background or text color. If the user taps on the text label, the background should change to white, and the text to black. Starter code is provided in the ColorChooser project.
 
-> Check: Were students able to create the desired deliverable(s)? Did it meet all necessary requirements / constraints?
 
 
 <a name="conclusion"></a>

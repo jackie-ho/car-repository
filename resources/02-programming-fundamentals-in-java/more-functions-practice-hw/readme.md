@@ -17,7 +17,6 @@ Include a screenshot or better description in the deliverables section
 
 ## Introduction
 
-> ***Note:*** _This can be a pair programming activity or done independently._
 
 Sometimes we all need a bit of guidance in our life. This afternoon, we will be creating a simple 'magic-eight ball' that is run on the command line. Like a real 'magic-eight ball' will give a random answer to the question on our minds.
 

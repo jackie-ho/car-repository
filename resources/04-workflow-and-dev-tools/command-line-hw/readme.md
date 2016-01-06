@@ -12,7 +12,6 @@ standard: Workflow and Devtools
 
 ## Introduction
 
-> ***Note:*** _This can be a pair programming activity or done independently._
 
 Developing any type of application requires a degree of comfort navigating and interacting with your operating system through the command line, and similar to how you'll be practicing writing and running Java files and Android apps later in the course, we'll be practicing creating, modifying, and moving files and folders in your terminal to get you practicing Unix commands.
 

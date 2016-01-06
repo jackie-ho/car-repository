@@ -49,7 +49,6 @@ Every view has a number of properties specific to it. Some examples:
 
 *All* views are a *subclass* (or "descendant") of **View.java**. "All views are views." So, exactly how a Button has all of the properties of a TextView, all views have core properties that are provided by the View "class".  We'll go over classes in depth at a later date.
 
-> Check: Why do all Button and EditText have the same properties that can be manipulated as a TextView?  Why do all views share similar properties that can be manipulated?
 
 The commonly used properties for all view types are:
 
@@ -162,7 +161,6 @@ TextView textView = (TextView) findViewById(R.id.textView1);
 
 Now that you have a reference to your specific views, you can change the views to your liking!
 
-> Check: Describe how to retrieve a view from an activity.
 
 ## Demo: Changing view properties in Java (10 minutes)
 
@@ -192,7 +190,6 @@ textView.setTextColor(Color.BLACK);
 
 Let's use the layout created in the first demo, reference the views in Java, and change those view properties according the specifics provided. Finally we'll build the project to see their results.  I want you, though, to guide my progress and instructor me on what I should be doing to make this happen.  Do this with me.
 
-> Check: Were students able to successfully build the project according to the specifications provided by the instructor.
 
 ## Demo: Making views do "things" (20 minutes)
 
@@ -234,7 +231,6 @@ Note: This is worth repeating. ***All*** views are clickable, not just buttons. 
 
 I bring this up because sometimes you want to click things that are not buttons. For instance, clicking a photo.
 
-> Check: Describe how to make a button "clickable" with logic behind it.
 
 #### Putting it all together
 
@@ -244,7 +240,6 @@ When we click the button, it sets the color of the TextView to blue.
 
 Here's how the Activity would look. All of the code is defined in the activity's **onCreate()** method, which is talked about more in detail at a future lesson. Just know that onCreate is called when the activity starts, and that it loads your created layout with setContentView().
 
-> Instructor Note: Review this slowly, line by line. Elicit responses from students to ensure they are thinking about what the code is doing.
 
 ```java
 
@@ -279,7 +274,6 @@ Here's how the Activity would look. All of the code is defined in the activity's
 
 ## Independent Practice (20 minutes)
 
-> ***Note:*** _This can be a pair programming activity or done independently._
 
 Create a Hello World app! I will share the code above to use as a reference.  
 
@@ -290,7 +284,6 @@ The app should do the following:
 	* The Button should have the text, "Say hello"
 * When you click the button, the text in the TextView should say "Hello!"
 
-> Check: Were students able to make the app say hello world!
 
 
 ## Conclusion (5 mins)

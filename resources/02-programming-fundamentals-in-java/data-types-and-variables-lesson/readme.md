@@ -56,7 +56,6 @@ standard: Data Types and Variables
 <a name="opening"></a>
 ## Opening (5 min)
 
-> TO DO
 
 ## Introduction: Data types in Java (10 mins)
 
@@ -70,7 +69,6 @@ In computer science and computer programming, a data type or simply type is a cl
 
 Data types are similar across different languages, including English:
 
-> Instructor Note: Put the categories on the board and ask for students to provide the data type, or in some other way create a list on the board that includes the data types below.  Include both lowercase primitive and capitalized Object types.  This chart will be referenced later.
 
 |Category    | DataType                     | Description          | Example |
 |------------|------------------------------|----------------------|---------|
@@ -90,7 +88,6 @@ We'll elaborate all of the categories on the board, and show you some helper met
 ## Demo: Lets start with Numbers (15 mins)
 
 #### Starting an IntelliJ Project
-> Instructor Note: Create a new IntelliJ Project, describing each step aloud.
 
 Steps to Create a new IntelliJ Project: File > New > Project > Next > Create from Template.
 Note: you are given a class, that is named the same as the file with a `main` method inside it.
@@ -100,7 +97,6 @@ Also Note: What does the `//` mean?  This represents a comment. You can also rep
 We'll talk more about all of these pieces later, for now, write your code directly within the main method, where the comment says, `//Write your code here`.
 
 #### Decimals vs Integers
-> Instructor Note: As you code the following examples, ask the students the following. If they guess correctly, ask them to explain why.
 
 First off, lets talk a bit about those Number data types.
 
@@ -149,7 +145,6 @@ System.out.println("num5, type double = 5d/2d " + num5);
 
 Note: In the previous example, we used both a float and a double data type to save decimal numbers.  
 
-> Check: What is the difference between float and double and which should you use?
 
 #### Number data types and Bits
 
@@ -176,7 +171,6 @@ The same data type differentiation exists in Integers between shorts (did you no
 
 `int` will cover almost all of your Integer needs.
 
-> Check: What is the most common data type for decimals? What is the most common data type for integers?
 
 
 #### Using Standard Arithmetic Operators
@@ -185,7 +179,6 @@ Now that we understand a bit more about the Number data types, lets look a bit a
 
 The standard arithmetic operators - that you've been learning since grade school:
 
-> Instructor Note: Depending on time, and student understanding, this can be breezed over.  Be sure to mention modulus. as it is the one odd one.  If going through each example, ask students to calculate what will be printed to the console.
 
 ``` java
 System.out.println(2 + 2);
@@ -225,7 +218,6 @@ int range = Math.abs(max - min) + 1;
 (Math.random() * range) + min;
 ```
 
->Check: Who provides the Math object? Where do you think you might be able to find more information?  ([Oracle Math Documentation](https://docs.oracle.com/javase/7/docs/api/java/lang/Math.html))
 
 ## Introduction: Primitives vs. Objects (10 mins)
 
@@ -239,7 +231,6 @@ What is the difference?  Do you notice that it is capitalized?  This is a naming
 
 In other words: Using an object is like using a dewi decimal system in the library. A variable assigned to an Object is given a number that references where a book can be found in the computer's library but is not a copy of the book itself. `Person a = new Person(Nancy, Drew); ` is a reference to the data Object that contains all info and methods in the class of that object.
 
-> Check: What does a primitive contain? What does an object contain?  What's one easy way to tell the difference between an Object and a primitive data type?
 
 #### Words: char and Strings
 
@@ -249,7 +240,6 @@ A `char` is a primitive data type.  What is an example of a `char`?
 
 A String is capitalized because a String is an Object.
 
-> Check: What is an object?
 
 Strings are collections of letters and symbols known as *characters*, and we use them to deal with words and text.
 
@@ -324,7 +314,6 @@ String twoStringsTogether = "Hello" + " World";
 => "Hello World"
 ```
 
-> Instructor Note: Introduce other methods as seen fit.  May want to explain when concatenation might be used.
 
 ##### A special note on Equality among Strings:
 
@@ -362,7 +351,6 @@ Why isn't `withSigns` true? The print out looks the same. Remember, String is ac
 
 The long and short of it, use `equals` when comparing strings.
 
-> Check: Why can we call methods on a variable with data type string but not on an int?
 
 
 ## Demo: Converting between data types (10 mins)
@@ -418,16 +406,13 @@ A null value is an empty value.  Taken from a StackOverflow post:
 
 "Null" is a non-value. It is a "placeholder" for a data value that is not known or not specified. It is only meaningful in this context;
 
-> Check: When might you get NaN value?  What is a null value, by the way?
 
 <a name="ind-practice"></a>
 ## Independent Practice: Topic (15 minutes)
-> Instructor Note: This can be a pair programming activity or done independently.
 
 Download the coding prompt found in `VariablePractice` and complete all tasks. We will go over the answers in 12 minutes.
 
 
-> Check: Were students able to create the desired deliverable(s)? Did it meet all necessary requirements / constraints?
 
 ***
 

@@ -97,7 +97,6 @@ Here's how it looks in xml:
 </RelativeLayout>
 ```
 
-> Instructor Note: Walk through line by line of what's happening and why.
 
 
 ## Introduction: LinearLayout (5 mins)
@@ -240,7 +239,6 @@ In pairs, practice together by creating an Activity with a FrameLayout that matc
 
 - INSERT SPECS
 
-> Instructor Note: The instructional team should provide syntax reminders and values/attributes of what will be needed for this.  Starter/solution code too.
 
 ## Introduction: Nested Layouts (5 minutes)
 
@@ -276,7 +274,6 @@ Together, let's examine the image below and figure out its layout. Then, in Andr
 
 ## Independent Practice: Layouts (20 minutes)
 
-> ***Note:*** _This can be a pair programming activity or done independently._
 
 Recreate the layout of an app on the Google Play Store - use at least one nested layout. By the way, source images are not required and setting the background as a solid color should suffice.
 

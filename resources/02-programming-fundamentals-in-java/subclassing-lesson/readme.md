@@ -39,7 +39,6 @@ creator:
 Today we will be expanding upon our last lesson about classes. We learned about the basic components of a class and how they are created, but they can do so much more. We will be learning about how classes interact with each other, and more specifically, how they are related to each other.
 
 
-> Check: Ask students to define what a class is, and how to instantiate one.
 
 ***
 
@@ -50,7 +49,6 @@ One of the key ideas behind Object-Oriented Programming is defining relationship
 
 For instance, a rectangle and a triangle can both be considered a subclass of a shape. We can say that a triangle `is a` shape, and that a rectangle `is a` shape. We could simply make the properties and methods inside of Shape to store the correct amount of sides and calculate the area correctly based on the amount of sides, but our code becomes much clearer if we make a separate class to represent each.
 
-> Check: Ask the students to come up with another example of a superclass and a subclass.
 
 <a name="demo"></a>
 ## Demo: Topic (15 mins)
@@ -93,7 +91,6 @@ There are some important keywords to notice:
 
 What we have covered so far are all of the basics you need to build a class and create a subclass using it.
 
-> Check:  Ask the students to come up with another property for Shape, and how we would modify the Shape constructor and super call to accommodate that.  Example: dimensions (2D, 3D)
 
 
 <a name="guided-practice"></a>
@@ -182,7 +179,6 @@ We could also just define it as a DeLorean.
 DeLorean exampleDelorean = new DeLorean();
 ```
 
-> Check: Where have we seen this before in an Android app?
 
 We have seen this before in our previous Android apps when we use the findViewById method to find the instance of our View from the layout.
 
@@ -195,7 +191,6 @@ TextView textView = (TextView)findViewById(R.id.textview);
 <a name="ind-practice"></a>
 ## Independent Practice: Topic (15 minutes)
 
-> Instructor Note: This can be a pair programming activity.
 
 Now, you are going to try implementing your own class and subclasses. In pure Java:
 
@@ -207,7 +202,6 @@ Feel free to add any other properties you want~
 
 We have provided the three Java files, but you must add the `extends` keyword in the correct places.
 
-> Check: Were students able to create the desired deliverable(s)? Did it meet all necessary requirements / constraints?
 
 
 

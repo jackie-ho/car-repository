@@ -38,7 +38,6 @@ Now it's time to venture beyond the basic class and subclass designs we've learn
 
 Today we will cover topics including private and public member variables, overriding methods, and static and non-static variables and methods. All of these are key components to Android programs you will write. In fact, you have been using almost all of these already without knowing it!
 
-> Check: Ask students to explain the reasons why we use inheritance and subclassing.
 
 <a name="introduction"></a>
 ## Introduction: Public and Private member variables (15 mins)
@@ -74,11 +73,9 @@ textView.setText("Hello world!");
 
 `setText` is a `public` method of the TextView class. Many of the objects provided by Android have their own `private` methods that you never see in the autocomplete.
 
->Instructor Note: Explain dot notation
 
 Denoting a member `private` on the other hand will close all access except within the class
 
-> Check: Describe the difference between `public` and `private`.
 
 <a name="demo"></a>
 ## Demo: Public and Private member variables (5 mins)
@@ -111,7 +108,6 @@ exampleCar.getSpeed();
 
 Notice the private modifier that goes in front of the mSpeed variable. Any calls to a Car object from other code won't have direct access to the variable. That is why getters and setters exist. With a few exceptions, you will almost always make your member variables private.
 
-> Check: Ask why we use getters and setters instead of directly accessing member variables.
 
 <a name="guided-practice"></a>
 ## Guided Practice: Public and Private member variables (10 mins)
@@ -175,7 +171,6 @@ public class B extends A{
 
 Note the @Annotation. This is a concept in Java used to mark certain parts of code for the compiler. The @Override annotation is used to denote superclass methods that we are rewriting. The compiler can then warn us in case of mistake in our override.
 
-> Check: Ask the students what would happen if we used @Override on a method, but declared the method with different input values than the parent method.
 
 <a name="demo"></a>
 ## Demo: Overriding methods (5 mins)
@@ -219,7 +214,6 @@ public class DeLorean extends Car {
 ```
 We needed to make the increaseSpeed method from DeLorean match the one from Car.
 
-> Check: Were the students able to spot the problem and fix it?
 
 
 <a name="guided-practice"></a>
@@ -227,7 +221,6 @@ We needed to make the increaseSpeed method from DeLorean match the one from Car.
 
 Using the starter code in `DogOverride.java`, create a subclass `Poodle.java`. Add a bark method to both, where Poodle's overrides Dog's, so that it returns a different String depending on which type calls it.
 
-> Check:  Were students able to successfully complete the task?  Review one students solution with the class.
 
 
 ## Introduction: Static vs Non-Static (5 mins)
@@ -248,7 +241,6 @@ Toast.makeText(this,"Hello",Toast.LENGTH_LONG).show();
 
 Static variables are variables that are only created once in memory across all instances of a class. We will see an example of this in the next demo.
 
-> Check: Ask the students to give an example of a static variable we've used.
 
 
 <a name="demo"></a>
@@ -285,20 +277,17 @@ public class School{
   }
 }
 ```
-> Check: Ask the students what could happen if we made addTeacher or addStudent static.
 
 ## Guided Practice: Static vs Non-Static (5 mins)
 
 Have the students add a static member variable to the `StaticTest.java`, and print it to the console by accessing it as a static property.
 
-> Check: Were students able to successfully complete the task?
 
 <a name="ind-practice"></a>
 ## Independent Practice: Object Oriented Programming Fundamentals (10 minutes)
 
 Using the starting point of a Plane class in Plane.java, create at least two subclasses, create at least one static variable in one of the classes, and override the startEngine method in plane. You can pretend that methods such as turnPropellor() and igniteJetEngine() already exist. Make sure public and private keywords are included in the required places. Add any additional details you want if you have time.
 
-> Check: Were students able to create the desired deliverable(s)? Did it meet all necessary requirements / constraints?
 
 
 <a name="conclusion"></a>

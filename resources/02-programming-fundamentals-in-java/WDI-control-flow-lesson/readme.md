@@ -273,7 +273,6 @@ When verifying equality using double equal `==`, JavaScript does a lot of the "t
 
 To avoid type coercion and measure equality more strictly, **use the triple-equals operator**. Because `===` more truly measures actual equality, we'll use this far more often when checking whether too things are, in fact, the same thing.
 
-> **Note:** "Sameness" and "equality" have various definitions and can be somewhat "fuzzy". They can also differ by programming language. Because you'll often be measuring whether two things are equal, you should investigate the way this works carefully.
 
 Some examples:
 

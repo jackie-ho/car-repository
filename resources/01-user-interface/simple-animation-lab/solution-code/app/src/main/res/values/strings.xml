@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">SolutionCode</string>
+  <string name="general_assembly">GENERAL ASSEMBLY</string>
+  <string name="your_wish">Your wish</string>
+  <string name="add_your_wish">add a wish</string>
+  <string name="wish_input">type in your wish</string>
+</resources>

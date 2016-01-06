@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Neighborhood Guide</string>
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search for guide info</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="action_settings">Settings</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Playlist</string>
+    <string name="hint_title">Song Title</string>
+    <string name="hint_artist">Artist Name</string>
+</resources>

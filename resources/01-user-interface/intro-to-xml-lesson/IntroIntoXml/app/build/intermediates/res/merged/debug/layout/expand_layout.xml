@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--a layout file for Independent Practice #2 in the lesson-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/activity_custom_margin"
+    android:layout_marginBottom="@dimen/activity_custom_margin"
+    android:background="#FF9800">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/android_alien"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:textSize="@dimen/default_text"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="@string/message_to_alien"
+        android:layout_weight="1"
+        android:gravity="center"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/droid_marshmallow"
+        android:layout_weight="3"/>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+  <string name="app_name">IntroIntoXml</string>
+  <string name="us_holidays">US Holidays</string>
+  <string name="android_alien">Android is an alien</string>
+  <string name="message_to_alien">Enter a message to the alien!</string>
+  <string-array name="holidays_array">
+    <item>Independence Day</item>
+    <item>Labor Day</item>
+    <item>Thanksgiving</item>
+    <item>New Year</item>
+    <item>Christmas</item>
+  </string-array>
+</resources>

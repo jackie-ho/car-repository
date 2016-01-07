@@ -12,4 +12,4 @@ Take a look at a few links we'll be using throughout class:
 
 ## Instructors, read below
 
-Set an upstream remote to the [master repository](https://github.com/generalassembly-studio/adi-curriculum).  After you've fetched recent additions to the course, be sure to run the `transform.sh` file to remove solution code and instructor comments before adding and committing your changes. 
+Set an upstream remote to the [master curriculum repository](https://github.com/generalassembly-studio/adi-curriculum).  After you've fetched recent additions to the course, be sure to run the `transform.sh` file to remove solution code, assignments that require separate repos, and instructor comments before adding and committing your changes. 

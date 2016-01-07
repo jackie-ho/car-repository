@@ -2,7 +2,7 @@
 
 Welcome, ADI 1 from NYC!  
 
-In this repository, you'll find notes from in-class lessons to help you practice and review the topics we teach.
+In this repository, you'll find notes from in-class lessons, morning exercises, and homework assignments to help you practice and review the topics we teach.
 
 Take a look at a few links we'll be using throughout class:
 

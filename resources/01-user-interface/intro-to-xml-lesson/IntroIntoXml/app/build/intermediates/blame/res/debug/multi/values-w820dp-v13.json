@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/July/Desktop/IntroIntoXml/app/build/intermediates/res/merged/debug/values-w820dp-v13/values-w820dp-v13.xml",
+        "outputFile": "/Users/drewmahrt/FORKED_ADI/ADI-curriculum/resources/01-user-interface/intro-to-xml-lesson/IntroIntoXml/app/build/intermediates/res/merged/debug/values-w820dp-v13/values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/Users/July/Desktop/IntroIntoXml/app/src/main/res/values-w820dp/dimens.xml",
+                    "file": "/Users/drewmahrt/FORKED_ADI/ADI-curriculum/resources/01-user-interface/intro-to-xml-lesson/IntroIntoXml/app/src/main/res/values-w820dp/dimens.xml",
                     "position": {
                         "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 291,
-                        "endColumn": 57,
-                        "endOffset": 344
+                        "startColumn": 2,
+                        "startOffset": 287,
+                        "endColumn": 55,
+                        "endOffset": 340
                     }
                 }
             }

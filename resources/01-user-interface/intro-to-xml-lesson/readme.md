@@ -5,13 +5,6 @@
 | --- | --- | --- | --- |
 | Intro to XML | "1:30" | Yuliya Kaleda | NYC |
 
-<!-- OUTSTANDING ITEMS
-
-- LinearLayout is asked of students in independent practice one; this is a concept we haven't covered yet
-- Checks within each section
-
--->
-
 ---
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Intro to XML
 
@@ -44,7 +37,7 @@ Let's go over some simple vocabulary that we'll need to know:
 
 *Extensible* - a quality of something, such as a program, programming language, or protocol, that is designed so that users or developers can expand or add to its capabilities.
 
-## Introduction: What is XML? (15 mins)
+## Introduction: What is XML? (10 mins)
 
 * XML stands for Extensible Markup Language
 * XML is a markup language much like HTML
@@ -74,18 +67,45 @@ A tag – either opening or closing – is used to mark the start or end of an e
 
 #### Attributes:
 
-Inside the tag, following the element name, there can be some data (e.g. myElement="Main element"). This is called an attribute.
+Inside the tag, following the element name, there can be some data (e.g. type="Main element"). This is called an attribute.
 You can think of attributes as adjectives – they provide additional information about the element that may not make any sense as content.
 If we modify our example and add attributes to each element, our example will look like this:
 
 ```xml
-<elements="parentElement">
-    <myelement="childElement1">one</myelement>
-    <myelement"childElement2">two</myelement>
+<elements name="parentElement">
+    <myelement name="childElement1">one</myelement>
+    <myelement name="childElement2">two</myelement>
  </elements>
  ```
+
+> Check: Have different students describe the syntax of an xml element, and what attributes are used for.
+
+## Codealong: Create a simple XML file in Android Studio (10 mins)
+
+Let's create a simple XML layout together. Take a car as an example. We can have attributes for make, model, color, year. We can have child elements that represent the parts in the car, such as wheels, engine, seats.
+
+```xml
+<car make="honda" model="civic" color="blue">
+  <wheels>4</wheels>
+  <engine cylinders="4"></engine>
+  <seats>4</seats>
+</car>
+```
+
+> Check: Ask the students to come up with a few more examples on their own in small groups, then share with the class.
+
 ## Independent Practice: Create a layout file (15 mins)  
-Create an xml layout file in Android Studio that has a LinearLayout. It should have an id ("parent"), layout_width("match_parent"), layout_hight("match_parent"), margin top and bottom(10dp), orientation("vertical) and background color("#FF9800"). Import IntroIntoXml app, open add_root_element.xml file in the res/layout folder and compare it to your xml file.
+Now that we've seen the basic syntax for an XML file, let's make one together in Android Studio. We're going to create a "ga-class" parent element with various child elements, such as classroom, start time, end time, instructors, and students.
+
+Parent element:
+- "ga-class" parent element
+- "name" attribute for ga-class with the value "ADI"
+- classroom attribute for ga-class with the value "2B"
+Child elements:
+- Two instructor elements, one with the content "James", and the other with the content "Drew"
+- Student elements, with names as content, and an "age" attribute
+
+> Check: Were the students able to complete the activity?
 
 ## Introduction: Namespacing (15 mins)
 
@@ -99,8 +119,8 @@ In the attribute xmlns:pfx, xmlns is like a reserved word, which is used only to
 
  ```xml
 <elements xmlns:pfx="http://www.example.com">
- <pfx:myelement="childElement1">one</pfx:myelement>
- <pfx:myelement="childElement2">two</pfx:myelement>
+ <pfx:myelement>one</pfx:myelement>
+ <pfx:myelement>two</pfx:myelement>
 </elements>
  ```
 The tags ```<myelement>``` are associated with the namespace "http://www.example.com".
@@ -122,30 +142,36 @@ Some XML elements are said to be empty – they contain no content whatsoever. R
  ```
 The / at the end of this tag basically tells the parser that the element starts and ends right here. It’s an efficient shorthand method that you can use to mark up empty elements quickly.
 
-## Independent Practice: Add to your Layout file (15 mins)
-To the recently created layout file add 3 child elements:
-* a TextView of layout_width "match_parent", layout_height "0dp", text "Android is an alien", white textColor, layout_weight "1", textSize "18sp", gravity "center";
-* an EditText with a hint "Enter a message to the alien!", of layout_width "match_parent", layout_height "0dp", layout_weight "1", gravity "center";
-* an ImageView of layout_width "wrap_content", layout_height "0dp", layout_weight "3", the following image as background:  
-![](https://cloud.githubusercontent.com/assets/10750398/11913611/6e1a2720-a67a-11e5-9a58-77c82913862c.jpg)  
+> Check: Ask the students why we use namespacing
 
-Import IntroIntoXml app, open `expand_layout.xml` file in the res/layout folder and compare it to your created xml file.
+## Independent Practice: Add to your Layout file (15 mins)
+Let's make some changes to the ga-class element we created earlier:
+
+- Add the prefix "ga" and the namespace "http://ga-class.com" to the ga-class element
+- Use the "ga" prefix on child elements
+- Change the classroom element to be an empty child element with the attributes name("3B") and seats("35")
+- Nest each student element to be within a new "students" element
+- Add a classroom-supplies child element, which contains marker elements with the content "blue", "green", and "red" .
+
+> Check: Were the students able to complete the activity?
 
 ## Demo: Basic XML example in Android (10 mins)
 
-Now that we have covered all the basics of XML, let's take a look at how it gets integrated into an Android app. Import the project "IntroIntoXml" and run the app. Open the AndroidManifest.xml file:
+Now that we have covered all the basics of XML, let's take a look at how it gets integrated into an Android app. Import the project "IntroIntoXml". Open the AndroidManifest.xml file:
 
 - the parent element is "manifest" with a namespace "http://schemas.android.com/apk/res/android";
 - the "manifest" tag has a child "application", which also has just one child element "activity";
-- the "activity" element has 5 attributes and their values: allowBackup, icon, label, supportsRtl, theme. It includes a child element "intent-filter", which has 2 empty elements "name".
+- the "application" element has 5 attributes and their values: allowBackup, icon, label, supportsRtl, theme. It includes a child element "intent-filter", which has 2 empty elements "name".
 
-Now, open MainActivity Java class and check that the content view is set to R.layout.activity_main file (this is the way we integrate our code with the UI layout components). Click Command + Enter on the file and you will be redirected to the layout file in the resource folder:
+Now, open the activity_main.xml
 
 - the parent element is "RelativeLayout" with a lot of attributes: layout_width, layout_height, paddingLeft, paddingRight, etc. It has the namespace "http://schemas.android.com/apk/res/android";
 - it has 2 children: TextView and Spinner;
 - TextView and Spinner are considered to be siblings elements;  
 - TextView has the following attributes: id, text, layout_width, layout_height, layout_marginTop, textSize, layout_centerHorizontal;
 - Spinner includes id, layout_width, layout_height, layout_below, layout_marginTop attributes.
+
+> Check: Ask the students to identify all of the items described above
 
 ## Independent Practice: Look at an XML file (10 mins)
 
@@ -185,7 +211,7 @@ With a partner, look at the following code/file and answer the questions below:
  3. Name parent and children elements.
  4. Find and name empty elements (the ones that do not have content).
 
- > Instructor Note: Review the questions above in the conclusion.
+ > Check: Were the students able to complete the questions above?
 
 ## Conclusion (5 mins)
 

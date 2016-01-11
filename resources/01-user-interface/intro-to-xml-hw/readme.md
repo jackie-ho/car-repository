@@ -27,10 +27,6 @@ In the [starter code](starter-code) folder, there is an [XML file](starter-code/
 
 In the [text](starter-code/bonus.txt) file, answer the questions about the given xml file.
 
-#### Starter code
-
-There is no starter code!  Please create a new IntelliJ project. Refer back to the example given during the functions-and-scope-lesson for an example of interacting with a user through the command line.
-
 #### Deliverable
 
 Push the changes to phones.xml and bonus.xml to Github. Make a pull request so we can see your changes.

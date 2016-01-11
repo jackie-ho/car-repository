@@ -8,7 +8,7 @@ Introduction to XML | homework | James Davis (New York)
 
 ## Exercise
 
-You are creating the database of a phone store.
+You are creating a small xml database of a phone store.
 
 #### Requirements
 

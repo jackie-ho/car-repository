@@ -78,7 +78,6 @@ If we modify our example and add attributes to each element, our example will lo
  </elements>
  ```
 
-> Check: Have different students describe the syntax of an xml element, and what attributes are used for.
 
 ## Codealong: Create a simple XML file in Android Studio (10 mins)
 
@@ -92,7 +91,6 @@ Let's create a simple XML layout together. Take a car as an example. We can have
 </car>
 ```
 
-> Check: Ask the students to come up with a few more examples on their own in small groups, then share with the class.
 
 ## Independent Practice: Create a layout file (15 mins)  
 Now that we've seen the basic syntax for an XML file, let's make one together in Android Studio. We're going to create a "ga-class" parent element with various child elements, such as classroom, start time, end time, instructors, and students.
@@ -105,7 +103,6 @@ Child elements:
 - Two instructor elements, one with the content "James", and the other with the content "Drew"
 - Student elements, with names as content, and an "age" attribute
 
-> Check: Were the students able to complete the activity?
 
 ## Introduction: Namespacing (15 mins)
 
@@ -142,7 +139,6 @@ Some XML elements are said to be empty – they contain no content whatsoever. R
  ```
 The / at the end of this tag basically tells the parser that the element starts and ends right here. It’s an efficient shorthand method that you can use to mark up empty elements quickly.
 
-> Check: Ask the students why we use namespacing
 
 ## Independent Practice: Add to your Layout file (15 mins)
 Let's make some changes to the ga-class element we created earlier:
@@ -153,7 +149,6 @@ Let's make some changes to the ga-class element we created earlier:
 - Nest each student element to be within a new "students" element
 - Add a classroom-supplies child element, which contains marker elements with the content "blue", "green", and "red" .
 
-> Check: Were the students able to complete the activity?
 
 ## Demo: Basic XML example in Android (10 mins)
 
@@ -171,7 +166,6 @@ Now, open the activity_main.xml
 - TextView has the following attributes: id, text, layout_width, layout_height, layout_marginTop, textSize, layout_centerHorizontal;
 - Spinner includes id, layout_width, layout_height, layout_below, layout_marginTop attributes.
 
-> Check: Ask the students to identify all of the items described above
 
 ## Independent Practice: Look at an XML file (10 mins)
 

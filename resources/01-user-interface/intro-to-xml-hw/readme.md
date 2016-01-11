@@ -23,7 +23,7 @@ You are creating a small xml database of a phone store.
   * OS (Operating System)
 
 **Bonus:**
-In the [starter code](starter-code) folder, there is an [XML file](starter-code/library.xml) and a [solution.txt](starter-code/bonus.txt).
+In the [starter code](starter-code) folder, there is an [XML file](starter-code/library.xml) and a [bonus.txt](starter-code/bonus.txt).
 
 In the [text](starter-code/bonus.txt) file, answer the questions about the given xml file.
 

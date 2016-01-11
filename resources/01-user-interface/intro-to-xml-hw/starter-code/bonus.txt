@@ -1,0 +1,12 @@
+Q) How many child elements does the book element with id "592" have?
+A)
+
+Q) How many attributes does the "library" element have?
+A)
+
+Q) The book with id "112" actually has 2 authors (Aziz Ansari and Eric Klinenberg).
+How would you change the book to reflect two authors?
+A)
+
+Q) What additional elements would you add to the book elements?
+A)

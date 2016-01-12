@@ -4,14 +4,6 @@ Views 101 | lesson | 1:30 | James Davis (New York)
 
 --
 
-<!--  OUTSTANDING:
-
-- Create a demo of Changing Views Part 1
-- Create specifications for Changing Views Part 2
-- Create starter code for the final activity
--->
-
-
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Views 102
 
 ### Objectives
@@ -49,7 +41,6 @@ Every view has a number of properties specific to it. Some examples:
 
 *All* views are a *subclass* (or "descendant") of **View.java**. "All views are views." So, exactly how a Button has all of the properties of a TextView, all views have core properties that are provided by the View "class".  We'll go over classes in depth at a later date.
 
-
 The commonly used properties for all view types are:
 
 * width
@@ -67,20 +58,12 @@ Also, you can just Google it! Usually googling "Android *TypeOfView*" would have
 
 Now, that you know about views having attributes/properties, you can probably guess that you can assign values to these properties to affect how they look and behave on the screen.
 
-Think of the following comparison:
-
-You sit down for a meal and the meal has different components: pizza, diet coke, and wings.  Depending on the component, there are particular properties you can ask to change:
-
-- What toppings can you have on your pizza?
-- Can or fountain for your diet coke?
-- Flavor of the wings?
-
-We'll come back to this example in a moment.
-
 
 ## Demo: Changing View Properties in XML (10 minutes)
 
 You, hopefully, have already changed some properties in XML, especially when it comes to TextViews, but let's go through the process anyway to solidify the concept.
+
+Start a new project called Views102Example.
 
 First, to access all of a view's properties, the layout must be inside the android xml namespace. This is usually added to a layout's topmost view group automatically, but here's how it looks:
 
@@ -110,15 +93,6 @@ Here's how a TextView with large red bold text would look:
 
 What's the deal with the "30sp" value for text size? This will be explained in detail later. But for now, know that they stand for "scaled pixels," and that **sp**, **dp**, and **px** are units of pixel measurement.
 
-Going back to our meal example:
-
-| Example | Comparison to Android |
-| - | - |
-| Meal | Activity |
-| Pizza | TextView (View)|
-| Pizza Topping | textColor (Property/Attribute) |
-| Cheese and Chicken | #FF0000 (Value)|
-
 Here's another example of a button with the id "button1", margins, that is the width of it's parent view, and has an opacity of 50%:
 
 ```xml
@@ -130,9 +104,11 @@ Here's another example of a button with the id "button1", margins, that is the w
 	android:alpha="0.5"/>
 ```
 
-## Demo: Changing Views Part 1 (5 minutes)
 
-Watch me as I create a layout and add a few views to it. In XML, the views are changed to look differently.
+## Guided practice: Changing Views Part 1 (5 minutes)
+
+Let's make a an app with three TextViews, with the text "Red", "Green", and "Blue". The text color for each should correspond to what the text says.
+
 
 ## Intro: Referencing views in Java (10 minutes)
 
@@ -186,12 +162,18 @@ textView.setText("New Text");
 textView.setTextColor(Color.BLACK);
 ```
 
-## Guided Practice: Changing Views Part 2 (10 minutes)
+## Independent Practice: Changing Views Part 2 (10 minutes)
 
 Let's use the layout created in the first demo, reference the views in Java, and change those view properties according the specifics provided. Finally we'll build the project to see their results.  I want you, though, to guide my progress and instructor me on what I should be doing to make this happen.  Do this with me.
 
+We are going to change the following:
 
-## Demo: Making views do "things" (20 minutes)
+- Text color to white
+- Background color of TextViews to their corresponding color
+- Font size to 20sp
+
+
+## Introduction: Making views do "things" (20 minutes)
 
 You can make an app that shows a static layout and nothing else. However, that would be boring. Apps do stuff; they show information, and they react to information provided by the user.
 
@@ -232,7 +214,7 @@ Note: This is worth repeating. ***All*** views are clickable, not just buttons. 
 I bring this up because sometimes you want to click things that are not buttons. For instance, clicking a photo.
 
 
-#### Putting it all together
+## Demo: Putting it all together
 
 Let's assume we have a layout, *activity_blue.xml*, with two views: a TextView and a Button. They have the ids *textView* and *button*, respectively.
 
@@ -270,6 +252,7 @@ Here's how the Activity would look. All of the code is defined in the activity's
         }
 	}
 ```
+
 
 
 ## Independent Practice (20 minutes)

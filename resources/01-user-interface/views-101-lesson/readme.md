@@ -19,12 +19,16 @@ Views 101 | lesson | 1:30 | James Davis (New York)
 
 * Identify what a view is and what it’s used for
 * Match sections of the view XML to what’s on the screen
-* Create OnClickListeners, making views react to a user's click
 
 ### Preparation
 *Before this lesson, students should already be able to:*
 
 - Create or import a project in Android Studio
+
+
+## Opening (5 minutes)
+
+We all use apps every day on our phones, but we often don't think about how they are designed. There is a lot of thought that goes into how everything on the screen looks, and how it is organized. Today we're going to be exploring the basics of how the user interface is built in Android.
 
 
 ## Introduction: Views (15 minutes)
@@ -70,21 +74,22 @@ Buttons, by default, have a background that react to a user's touch. (i.e., it l
 
 *For the purposes of this lesson, we will only look at RelativeLayout. We talk about the other view groups more in depth in the Layouts lesson.*
 
+
 ## Guided Practice: Let's draw a few Layouts (10 minutes)
+
 
 In pairs, on your desks, draw and identify the basic layouts using the views we just learned for the following activities:
 
 * A post on Facebook or Twitter
-* A dating card on Tinder
+* A post on Facebook (with a picture)
 * The description on a YouTube video
 
 You should have an idea of popular layouts for popular applications.
 
+
 ## Introduction: Layouts and XML (20 minutes)
 
 #### How do I create my own views and view groups?
-
-*Here's a quick refresher on XML files: [XML Lesson](#)*
 
 The easiest way to create views are in layout files and those are are XML files. Every element defines the different types of views and view groups. Attributes define how the views and view groups are displayed to the user.
 
@@ -151,18 +156,27 @@ In this example, take note of the following:
 	* Because it is a TextView, it also defines its optional parameters: text size is 20 scaled pixels (Views 102), text color is the hex code for black, and the text style is bold.
 	* Because its parent is a RelativeLayout, the text view can be placed relative to other views. In this case, it is directly below the view with id "textView1".
 
+	> Check: Ask the students what two values are required for all Views, and what two common pre-defined values are usually used for them.
+
 ## Guided Practice: Let's program some layouts (15 minutes)
 
 Let's go over adding views and layouts in Android Studio. We will start off dragging views in the Android Studio Designer Tool, then switch over to the XML view to see how they are related. Then, we will add views via xml and see how the look in the preview.
+
+We're going to create a login form with two TextViews, two EditTexts, and a button. We will add the first TextView and EditText with the designer tool, and the rest through XML.
+
 
 ## Independent Practice: Create your own layouts (20 minutes)
 
 
 Provided the screenshot below of a simple view in an Android app, the teams will try to create the view on their own.
 
-INSERT SCREENSHOT HERE
+<img src="screenshots/practice_screenshot.png" width="200">
+
 
 ## Conclusion (5 mins)
+
+Hopefully you're starting to learn the basic types of Views in Android. Knowing how to combine views to make your apps in XML can be tough to learn at first, but it will give you a much better understanding of the details of each kind of view. Let's review the following topics:
+
 - What is a view?
 - What is a view group?
 - How does a RelativeLayout work?

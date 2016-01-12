@@ -1,0 +1,35 @@
+<library name="New York Public Library">
+  <books>
+    <book id="347">
+      <title>The Hunger Games</title>
+      <author>Suzanne Collins</author>
+      <publisher>Scholastic Corporation</publisher>
+      <price>$9.99</price>
+      <genres>
+        <genre>Adventure fiction</genre>
+        <genre>Science Fiction</genre>
+        <genre>Drama</genre>
+        <genre>Action</genre>
+      </genres>
+    </book>
+    <book id="592">
+      <title>The Girl on the Train</title>
+      <author>Paula Hawkins</author>
+      <publisher>Riverhead Books</publisher>
+      <genres>
+        <genre>Psychological Thriller</genre>
+      </genres>
+      <price>$14.95</price>
+    </book>
+    <book id="112">
+      <title>Modern Romance</title>
+      <author>Aziz Ansari</author>
+      <publisher>Penguin Press</publisher>
+      <genres>
+        <genre>Non-Fiction</genre>
+        <genre>Comedy</genre>
+      </genres>
+      <price>$12.49</price>
+    </book>
+  </books>
+</library>

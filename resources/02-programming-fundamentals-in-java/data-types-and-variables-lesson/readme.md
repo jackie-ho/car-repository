@@ -56,6 +56,7 @@ standard: Data Types and Variables
 <a name="opening"></a>
 ## Opening (5 min)
 
+When programming, we need to store data in variables. Sometimes these are simple whole numbers (integers), or sometimes they are words (strings). There are many different types of data in Java, and today we will be learning how to use them, and what they are best suited for.
 
 ## Introduction: Data types in Java (10 mins)
 
@@ -73,17 +74,18 @@ Data types are similar across different languages, including English:
 |Category    | DataType                     | Description          | Example |
 |------------|------------------------------|----------------------|---------|
 |True/False  | boolean, Boolean                   | Represents either true or false                               |true, false|
-|Integers    | short, int, Integer, long, Long    | Whole numbers, with no delimiter. Can optionally have underscores to make large numbers easier to read	| 42, 1024, 1_000_000 |
+|Whole Numbers    | short, int, Integer, long, Long    | Whole numbers, with no delimiter. Can optionally have underscores to make large numbers easier to read	| 42, 1024, 1_000_000 |
 |Decimals    | float, Float, double, Double       | Decimals, with no delimiter                                   | '42.123', 2.5' |
 |Characters  | char                               | Single character, surrounded by single quotes                 | 'a', 'A'|
-|Strings     | String                             | Single words or sentences, surrounded by double quotes        | "lots of kittens", "a lazy lizard"    |                                                                | true, false
+|Strings     | String                             | Single words or sentences, surrounded by double quotes        | "lots of kittens", "a lazy lizard"    |                                                                
 
 
 There are also a few odd ones:
 - Byte, which is one bit of data. You don't need to worry about it right now.  
 - Collections (we'll talk more about this Week 3)
+- Other Java Classes
 
-We'll elaborate all of the categories on the board, and show you some helper methods to help you manipulate them.
+We'll elaborate all of the categories, and show you some helper methods to help you manipulate them.
 
 ## Demo: Lets start with Numbers (15 mins)
 
@@ -96,6 +98,7 @@ Also Note: What does the `//` mean?  This represents a comment. You can also rep
 
 We'll talk more about all of these pieces later, for now, write your code directly within the main method, where the comment says, `//Write your code here`.
 
+
 #### Decimals vs Integers
 
 First off, lets talk a bit about those Number data types.
@@ -105,7 +108,7 @@ What do you expect to be printed to the console?
 ```java
 int num1 = 5;
 System.out.println("num1, type int = " + num1);
-=> num1 = 2
+=> num1 = 5
 ```
 
 How about here?
@@ -119,21 +122,21 @@ System.out.println("num2, type int = 5/2 = " + num2);
 But Why is `num2` not 2.5? Well, in low-level languages (unlike JavaScript, Ruby or PHP) numbers are strictly typed, and a type is either an integer or decimal.  An int stores a Integer, not a decimal, as demonstrated in the previous function.
 
 So, what sort of variable would we use if we wanted to assign a variable to a decimal?
-How about a float?
+How about a double?
 
 ```java
-float num3 = 5 / 2;
-System.out.println("num3, type float = 5/2 = " + num3);
-=> num3 = 2
+double num3 = 5 / 2;
+System.out.println("num3, type double = 5/2 = " + num3);
+=> num3 = 2.0
 ```
 
 That didn't work quite as expected. Can anyone guess why?
 
-Because both 5 and 2 are automatically assigned data type int, when the calculation is done the answer is also an int ( `float a = (float) int a = int b / int c;` ). We must tell the computer that the divisors are of a decimal type, not an integer type.
+Because both 5 and 2 are automatically assigned data type int, when the calculation is done the answer is also an int ( `double a = (double) int a = int b / int c;` ). We must tell the computer that the divisors are of a decimal type, not an integer type.
 
 ```java
-float num4 = 5f / 2f;
-System.out.println("num4, type float = 5f/2f = " + num4);
+double num4 = 5.0 / 2.0;
+System.out.println("num4, type double = 5.0/2.0 = " + num4);
 => num4 = 2.5
 ```
 
@@ -142,8 +145,6 @@ double num5 = 5d / 2d;
 System.out.println("num5, type double = 5d/2d " + num5);
 => num5 = 2.5
 ```
-
-Note: In the previous example, we used both a float and a double data type to save decimal numbers.  
 
 
 #### Number data types and Bits
@@ -172,21 +173,32 @@ The same data type differentiation exists in Integers between shorts (did you no
 `int` will cover almost all of your Integer needs.
 
 
+#### Modulus
 
-#### Using Standard Arithmetic Operators
+One operator you probably aren't familiar with is the modulus. We've seen how we can divide numbers, but what if we want the remainder. Luckily, Java provides an easy way to do this using the `%` symbol.
 
-Now that we understand a bit more about the Number data types, lets look a bit at what we can do with them.
+```java
+int remainder = 8%3;
+System.out.println("Remainder 8%3 = "+remainder);
+```
 
-The standard arithmetic operators - that you've been learning since grade school:
+## Independent Practice (5 minutes)
 
+In pairs, try to figure out what each print statement will give without actually running the code on your computers.
 
 ``` java
 System.out.println(2 + 2);
-System.out.println(2 - 2);
-System.out.println(2 / 2);
-System.out.println(2 * 2);
-System.out.println(2 % 2); // What does this do??
+System.out.println(2 + 2.0);
+System.out.println(4 - 5);
+System.out.println(6 / 3);
+System.out.println(3 / 6);
+System.out.println(3.0 / 6.0);
+System.out.println(5 * 6);
+System.out.println(2 % 2);
+System.out.println(1 % 2);
+System.out.println(9 % 4);
 ```
+
 
 ## Demo: Using Special number Operators (10 mins)
 
@@ -214,58 +226,33 @@ Need a random number? Then use `Math.random()`.
 Math.random()
 => ?
 // returns random number in range
-int range = Math.abs(max - min) + 1;
+int range = Math.abs(max - min);
 (Math.random() * range) + min;
 ```
 
 
-## Introduction: Primitives vs. Objects (10 mins)
-
-Before we get into Strings, let's take a step back. Have you noticed that all the data types we've used so far are lowercase? What do you notice about the `String` data type?
-
-What is the difference?  Do you notice that it is capitalized?  This is a naming convention that is used to distinguish between primitive and Object data types.
-
-**Primitive data types**: are a piece of data and are **pass-by-value**.  This means: Using a primitive as a parameter is like writing a number on a post-it note and handing it off. `int a = 1; ` is a *copy* of the number data, not a reference to where the data is stored;
-
-**Object data types**: contain attributes and methods, and start with a capital letter. These are **pass-by-reference**.
-
-In other words: Using an object is like using a dewi decimal system in the library. A variable assigned to an Object is given a number that references where a book can be found in the computer's library but is not a copy of the book itself. `Person a = new Person(Nancy, Drew); ` is a reference to the data Object that contains all info and methods in the class of that object.
-
-
 #### Words: char and Strings
 
-With that basic introduction to the two larger sorts of data types, primitives and Objects, lets talk about words.
-
-A `char` is a primitive data type.  What is an example of a `char`?
-
-A String is capitalized because a String is an Object.
-
-
-Strings are collections of letters and symbols known as *characters*, and we use them to deal with words and text.
-
-Strings are special - String is actually a array of 'char' data:
+Now that we've talked about different types of numbers, lets talk about letters and words.
 
 ``` java
 String str = "abc";
 // is actually
-char data[] = {'a', 'b', 'c'};
+char a = 'a';
 ```
 
-## Guided Practice: Creating a new string (15 mins)
+A `char` is a primitive data type.  What is an example of a `char`?
 
-Strings are a weird type of Object.
+Strings are collections of letters and symbols known as *characters*, and we use them to deal with words and text.
 
-Try this with me.  You can instantiate (or create an instance) a String in a few ways:
+Let's take a step back. Have you noticed that all the data types we've used so far are lowercase? What do you notice about the `String` data type? What is the difference?  Do you notice that it is capitalized?  This is a naming convention that is used to distinguish between primitive and Object data types. We will discuss Objects in more detail later in the course, but all you need to know for now is that you can do extra things with objects, as you will see soon.
+
+
+## Demo: Creating a new string (15 mins)
 
 ``` java
 //variable can be assigned like a primitive
 String a = "I'm a string."
-```
-
-Which is really short for:
-``` java
-//variable assigned like an Object
-String a = new String("I'm a string too!")
 ```
 
 #### String helper methods
@@ -314,12 +301,11 @@ String twoStringsTogether = "Hello" + " World";
 => "Hello World"
 ```
 
-
 ##### A special note on Equality among Strings:
 
 What if you want to compare two strings?
 
-Can you remember from the pre-work how to compare variables?
+Can you remember how to compare integers?
 
 ```java
 boolean areEqual = (1 == 2);
@@ -357,7 +343,7 @@ The long and short of it, use `equals` when comparing strings.
 
 Sometimes it is necessary to convert between data types.  User input is _always_ a string - like when you enter your email address, age, income, etc.  If you'd like to operate on those numbers though, you'll have convert it to a type of number.
 
-Remember how we talked about the size of primitive data types? An float is smaller than a double, and a double smaller than a long?
+Remember how we talked about the size of primitive data types? A float is smaller than a double, and a double smaller than a long?
 
 When converting from smaller types to larger types, for example, int(4 byte) to double(8 byte), conversion is done automatically. This is called **implicit casting**.
 
@@ -385,32 +371,29 @@ For example, to convert an String to an Integer, one can use:
 
 ```java
 String strValue = "42";
-int intValue = new Integer(strValue).intValue();
+int intValue = Integer.parseInt(strValue);
 ```
 
 Similar methods exist for all of the wrappers.
 
-#### NaN
-
-If a String is converted to a number but contains an invalid character, the result of the conversion will be **NaN**, which stands for: Not A Number.
-
-NaN is toxic, and if a calculation is attempted on that variable or a method called subsequently, your program will break.
-
-Test for NaN using `isNaN()`.
-
 #### Null
 
-A null value is an empty value.  Taken from a StackOverflow post:
+There is a special value we can set any object to called `null`. Null is a "placeholder" for a data value that is not known or not specified. You can also pass null into methods when you know that parameter won't be needed. Be careful though! Your program will still compile and run until it tries to do something with that null value, and then it will crash!
 
-"Zero" is a value. It is the unique, known quantity of zero, which is meaningful in arithmetic and other math.
-
-"Null" is a non-value. It is a "placeholder" for a data value that is not known or not specified. It is only meaningful in this context;
+```java
+String s = null;
+if(s == null){
+  System.out.println("The string is null");
+}else{
+  System.out.println("The string is not null");
+}
+```
 
 
 <a name="ind-practice"></a>
 ## Independent Practice: Topic (15 minutes)
 
-Download the coding prompt found in `VariablePractice` and complete all tasks. We will go over the answers in 12 minutes.
+Download the coding prompt found in `Practice` and complete all tasks. We will go over the answers in 10 minutes.
 
 
 
@@ -419,8 +402,7 @@ Download the coding prompt found in `VariablePractice` and complete all tasks. W
 <a name="conclusion"></a>
 ## Conclusion (5 mins)
 
-<!--  TO DO -->
-
+Understanding all of the different types of data, when they should be used, and how to manipulate them are very important to learning any programming language. As we progress further in the course, we will continue to encounter these simple data types, so understanding them now is crucial.
 
 
 ### ADDITIONAL RESOURCES

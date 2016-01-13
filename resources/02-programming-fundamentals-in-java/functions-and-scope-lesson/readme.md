@@ -8,15 +8,6 @@ creator:
 competencies: Programming fundamentals in Java
 ---
 
-<!--  OUTSTANDING
-
-1. Functions relevance in opening
-2. Demo of writing a function in the Demo: Writing Functions Section
-3. Solution code for independent practice
-4. Make the guided practice more straightfoward
-
--->
-
 # Functions (or Methods) and Scope
 
 ### Objectives
@@ -34,99 +25,29 @@ competencies: Programming fundamentals in Java
 
 ## Opening (5 mins)
 
-Functions are essential to write Java and keep the code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
+Today we're going to be talking about two important topics: methods and scope. Methods are simply blocks of code that can be reused to repeat a specific purpose. Scope is related to methods, and deals with where we are allowed to access the variables we have defined.
 
+> Instructor note: Make sure everyone still has IntelliJ installed
 
-## Introduction: Writing Functions and Languages (15 mins)
+> Check: Ask the students to name a few data types and examples of their use.
 
-**TODO Demo something cool.**
+## Introduction: Writing Methods (10 mins)
 
-Note the methods.
-Note methods are called from the main method.
+Sometimes we want to re-use code we've written to perform the same tasks multiple times. What are our choices? We could copy/paste the same blocks of code multiple times, but this could get old if we needed to run the same code 20 times. Another option we have are to write methods. We take this re-usable code, and section it off into something called a method.
 
-#### What we did
-Before we talk about scope, there's a few things to understand before thinking about what scope actually means.
+Methods are essential to write Java and keep the code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
-The code that you write *must* be translated into a form that the computer can understand.
+> Check: Ask the students for examples of methods
 
-Source code is human readable, *we hope*. This source code may be translated into a set of 1's and 0's that a computer's CPU can understand. Yep, the CPU is a chip on the computer that does all the processing.  There is a reason it's called the Central Processing Unit, or CPU.
+## Demo: Let's break it down (25 mins)
 
-`Source Code`  ==>  `1's and 0's`
+Let's look at what the parts of this method do. Let's start with the basics
 
-...or, the source code may be translated into a another type of language, byte code, that can be understood by a Virtual Machine(VM). A Virtual Machine executes a program, by translating each VM readable statement into a sequence of one or more subroutines already compiled into machine code. In the case of Java, the JVM understands bytecode.
-
-`Source Code` ==> `byte code`(understood by JVM and mapped to `1's and 0's` that the computer's CPU can understand)
-
-#### Compiled Languages
-
-Some languages are *explicitly* compiled. In other words, the programmer must run particular commands to invoke compilation.
-
-**Java** is one of these languages. To compile java code, the programmer must run a command like:
-
-`javac MainActivity java MainActivity.class`
-
-The `javac` command translates the Java code in the YourFile.java file into an *executable* or *binary* file (a YourFile.class file) that contains the `bytecode` understood by the JVM. This is what is done under the hood by a IDE like IntelliJ.
-
-The *JVM* is the **Java** compiler.
-
-So here's what happens:
-
-`Source Code`  ==>  `1's and 0's`
-
-`MainActivity.java`  ==>  `MainActivity.class`
-
-#### Interpreted Languages
-Some languages do *not* require the programmer to explicitly run a compiler. **JavaScript**, and **Ruby** are a couple of interpreted languages. There is still compilation being done, but it's done automatically.
-
-`Source Code` ==> `byte code`
-
-#### From Source to Running Code.
-There are two basic phases to go through when going from code in a file to a program running.
-
-- Compile Time - a phase when the source code is translated to another form. For example, when we run the `javac HelloWorld` command, java program will compile java to an intermediate language/bytecode that the Java Virtual Machine(JVM) understands.
-
-- Runtime - a phase when the computer actually runs each statement in the program.  For example, when we run the `java HelloWorld.class` this is when the computer runs the java program bytecode.
-
-
-#### Main Method
-The main method is where everything starts.
-From the Oracle Java Documentation:
-
-In the Java programming language, every application must contain a main method whose signature is:
+> Instructor Note: Write method on the board (or add body to main method signature, at the appropriate time) and underline and label each part as you go through the following sections.
 
 ```java
-public static void main(String[] args)
-```
-
-
-The modifiers public and static can be written in either order (public static or static public), but the convention is to use public static as shown above. You can name the argument anything you want, but most programmers choose "args" or "argv".
-
-The main method is similar to the main function in C and C++; it's the entry point for your application and will subsequently invoke all the other methods required by your program.
-
-The main method accepts a single argument: an array of elements of type String.
-
-```java
-public static void main(String[] args)
-```
-
-This array is the mechanism through which the runtime system passes information to your application. For example:
-
-```
-java MyApp arg1 arg2
-```
-
-Each string in the array is called a command-line argument. Command-line arguments let users affect the operation of the application without recompiling it.
-
-
-
-## Demo: Let's break it down (15 mins)
-
-Let's look at what the parts of this method do. Let's start with the basics, which we covered a bit in explaining the main method..
-
-
-```java
-public                     void            interestingMethod(  String input  )     throws IOException
-//<modifiers/visibility>  <return type>    <method name>   (  <parameters>  )     <Exception list>
+public                     void            interestingMethod(  String input  )    
+//<modifiers/visibility>  <return type>    <method name>   (  <parameters>  )     
 {
 <opening brace>
     System.out.println("I am making" + input + "interesting!")
@@ -156,22 +77,20 @@ Non-Access Modifiers include:
 We'll explain more of what all these keywords mean in later lessons.  For now, use `public`!
 
 
-Any method that is called from within a static context must also be static. So, for all methods, for now use, `public static`. Again, we'll explain more what this means later.
-
-
 #### Return Type
 
 A method can return a value, but the type of that returned data must be specified so that the calling function knows what to do with it.
+
+>Instructor Note: Invite students to code along if they wish. Create a new java program, using the given console template from IntelliJ, or create a basic class with an inner main method. Then code the following two methods.  Use the commented out print statements to explain local scope.
+
 
 
 The problem:
 
 ```java
 class Main {
-    int mSum;
     public static void main(String[] args) {
         getSum();
-        // System.out.println(sum); // not available
     }
     public static void getSum() {
         int sum = 2 + 2;
@@ -180,11 +99,14 @@ class Main {
   }
 ```
 
+Great! What if we want to access the sum variable from main? Can we just call it?
+
+This is called `scope`. Variables defined in one method are out of scope of another method. One way to get around this is to return the value from the function so it can be used in another place.
+
 The solution:
 
 ```java
 class Main {
-    int mSum;
     public static void main(String[] args) {
         int returned = returnSum();
         System.out.println(returned);
@@ -223,6 +145,9 @@ class Main {
   }
 ```
 
+By placing the variable outside of the method, we are giving all methods below it access. The only way for two methods to access the same variable is to give it `global scope` by making it a member variable.
+
+> Check: Can we make variables of the same name in two different methods? Why?
 
 
 #### Method Name
@@ -242,7 +167,7 @@ Let's take a look back at the sum method.
 What would you need to do if you wanted to pass in a number to this method?
 
 ```java
-public static int returnSum(int num1) {
+private int returnSum(int num1) {
     int sum = num1 + num1;
     return sum;
 }
@@ -251,7 +176,7 @@ public static int returnSum(int num1) {
 How about two numbers?
 
 ```java
-public static int returnSum(int num1, int num2) {
+private int returnSum(int num1, int num2) {
     int sum = num1 + num2;
     return sum;
 }
@@ -259,24 +184,23 @@ public static int returnSum(int num1, int num2) {
 
 Now, note, the method can be called like so:
 ```java
-public static void main(String[] args) {
     int returned = returnSum(2,4);
     System.out.println(returned);
     int returned = returnSum(10,52);
     System.out.println(returned);
-}
 ```
 
+>Instructor Note: Emphasize the ability to reuse code without re-writing it. Remind students of the `DRY` principle.
 
 It is also possible to have a return type for an unknown number of arguments, which can be declared like so:
 ```java
-public static void myFunction(String... vars) {}
+private void myFunction(String... vars) {}
 ```
 
 or like so:
 
 ```java
-public static void myFunction(String[] vars) {}
+private void myFunction(String[] vars) {}
 ```
 
 These two signatures the same thing under the covers. From where does it look familiar?
@@ -291,8 +215,16 @@ In java, if a method declares a parameter, that *parameter* is required to be se
 This is where the main functionality of your method will be called.
 
 
+## Independent Practice - Other math operators (5 min)
+
+Write methods to perform division, multiplication, and subtraction. Follow the same pattern as addition, where you take in the inputs, and return the result. Print out tests for each method.
+
+> Check: Were all the students able to complete the activity?
+
+
 ## Guided Practice (15 min) - Code along
 
+>Instructor Note: Take a look at the [solution-code](solution-code) and run the askAQuestion java program, so students have an idea what they will be creating.
 
 Let's work through the following example. The Scanner class we'll be creating will be required in the lab.
 
@@ -352,6 +284,7 @@ Wait, what if we actually want to be able to try again?
 
 Note, this is called **recursion** - a Recursive method calls itself. For those who are interested in Math, a resource is included that talks about some of the other ways to use recursion to solve basic algorithms.
 
+>Instructor Note: Run the program and prove that it runs circularly.
 
 
 What if we want to exit out of the program?
@@ -378,8 +311,8 @@ What if we want to exit out of the program?
 ```
 
 ## Independent Practice: Write a few functions (15 min)
-Please create a new Java project in IntelliJ and work through as many as these exercises as you can within the next 15 mins. Use the official [Oracle Java Docs](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html) to help you through these exercises and look up the different class methods you can use. 
 
+Please create a new IntelliJ project and work through as many as these exercises as you can within the next 15 mins. Use the official [Oracle Java Docs](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html) to help you through these exercises and look up the different class methods you can use.
 
 1. Write a method called `divide152By`. This method should accept one argument, a number, and should divide 152 by the given number. For example, the divide152By result of 1 is `152/1` is 152. Your function should return the result.
 
@@ -410,9 +343,11 @@ Please create a new Java project in IntelliJ and work through as many as these e
     transmogrifier(5, 4, 3);
     transmogrifier(13, 12, 5);
     transmogrifier(42, 13, 7);
-```
+    ```
 
-4. Write a method called 'reverseString'. This method should take one argument, a String. The method should return a string with the order of the words reversed. Don't worry about punctuation
+4. BONUS: Write a method called 'reverseString'. This method should take one argument, a String. The method should return a string with the order of the words reversed. Don't worry about punctuation
+
+Hint: https://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html
 
     ```java
     reverseString("black cat"); => "tac kcalb"
@@ -421,8 +356,12 @@ Please create a new Java project in IntelliJ and work through as many as these e
     ```
 
 ## Conclusion (5 min)
+
+Let's review:
+
 - Why do we use methods?
 - When might you use a method?
+- Describe scope
 
 ## Resources:
 - [Oracle Java Docs - Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)

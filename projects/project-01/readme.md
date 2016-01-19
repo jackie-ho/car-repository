@@ -60,7 +60,7 @@ Below you can find an example of what the instructors' final product looks like.
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/generalassembly-studio/ADI-Curriculum/project-01/projects/project-01/screenshots/home.jpg?token=APWRPrzQrPbpUNe4cyKEYU9rue2DZkgUks5WaMQ8wA%3D%3D">
+  <img src="./screenshots/home.jpg">
 </p>
 
 #### Project Feedback + Evaluation

@@ -1,6 +1,6 @@
 ---
-title: functions-and-scope-lab
-type: lab
+title: more-functions-practice-hw
+type: Homework
 duration: "1:25"
 creator:
     name: Kristen Tonga
@@ -13,7 +13,7 @@ Include a screenshot or better description in the deliverables section
 
 -->
 
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Functions And Scope Lab
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) More Functions Practice Homework
 
 ## Introduction
 

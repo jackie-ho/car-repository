@@ -33,14 +33,12 @@ creator:
 
 So far, we have stored all of the information for our apps in individual variables. That works for a small amount of information, but what if we had to manage larger sets of data? For instance, what if we had credit card transactions in a customer's banking app. Would we want to store every transaction in its own variable, or have a single variable that would hold all of the transactions at once?
 
->  In pairs, come up with a few more examples of where storing our data in a collection would be beneficial (data situations or example apps) (1-2 minutes)
 
 <a name="introduction"></a>
 ## Introduction: Basic Arrays (5 mins)
 
 An array is a container object that holds a **fixed** number of values of **a single type**. You've already seen an example in the `main` method.
 
-> Instructor Note: Optional - Draw a picture similar to the one below on the board to visually display each element and corresponding index.
 
 Each item in an array is called an *element*, and each element can be accessed by it's *index*. The index of elements starts at 0. That means visually that:
 
@@ -49,13 +47,11 @@ Each item in an array is called an *element*, and each element can be accessed b
 | ELEMENT| x | x | x | x | x |
   -------|---|---|---|---|---
 
-> Check: If a fixed size is required, how would we add more space?
 
 ## Demo: Creating Arrays (5 mins)
 
 Let's create an Array together:
 
-> Instructor Note:  Explain each piece of syntax here
 
 ```java
   class ArrayDemo {
@@ -78,15 +74,12 @@ Let's create an Array together:
   }
 ```
 
-> Check: How would I find the index of the last element in the array using the length property?
 
 ## Independent Practice: Creating Arrays (10 mins)
 
 **Now you:** Create a String array of *three* of your favorite things. Print the result to the command line.
 
->Instructor Note: Go over how you would create `String[] favoriteThings;`
 
-> Check: What are the three parts of creating an array? (expect: declare variable, allocate memory, initialize/assign values)
 
 ## Demo: Manipulating Arrays (15 mins)
 
@@ -145,7 +138,6 @@ Note that indexing (getting/setting the item based on its position in the array)
 #### Error Checking
 Now what if we searched for an value that was not in the array? Let's see if 10 is a prime number.
 
-> Instructor Note: Add the lines below, leaving out the commented code. Throw the exception, ask the students why it was thrown, and ONLY THEN add in the >=0 check that is commented out below and above.
 
 ```java
   int[] primeNumbers = {5,3,11,7,2};
@@ -161,7 +153,6 @@ An Exception is thrown when the computer is asked to do something it can't do, l
 
 It is important to consider when the results of our actions might throw an exception, and add checks as needed.
 
-> Check:  If an array is 5 elements long, what happens if we look for `myArray[5]`?
 
 ## Demo: Problems with Arrays (10 min)
 
@@ -255,9 +246,7 @@ An ArrayList is an object, with methods, which makes it much easier to manipulat
     favoriteThings.size();
 ```
 
-> Instructor Note: Add other convenience methods as needed.
 
-> Check: What are advantages of using an ArrayList over an array? Expect students to include: automatic resizing, convenience methods.
 
 
 ## Guided Practice: Iterating Through a List with For Loops (15 mins)
@@ -270,7 +259,6 @@ The for loop is also commonly used with arrays and collections to iterate throug
 
 For example, let's create a list of 5 movies and iterate through it, printing each one to the command line.
 
-> Instructor Note: Get movie suggestions from the class. It is also possible to use Android Studio, and display all movie names in a view instead.
 
 ```java
   public static void main(String[] args) {
@@ -302,7 +290,6 @@ The enhanced for loop is the form that is recommended by Oracle for arrays and c
 
 A normal for loop is still useful sometimes -- it makes it easier to work with the index of each item alongside its value, or to modify the collection while you're iterating over it. But if you just need to do something with each element, the enhanced for loop is cleaner and more efficient.
 
->Check: Why might you want to iterate through an array?
 
 ## Independent Practice (15 mins)
 
@@ -324,7 +311,6 @@ Complete as many of the following challenges as you can in the next 15 minutes. 
 
 For example, `pig` becomes `igpay`, `banana` becomes `ananabay`, `twig` becomes `wigtay`, and `aadvark` becomes `aadvarkway`.
 
-> Instructor Note: The example for pig latin can be posted online if students do not get to it, as it will probably take too long to do in class.
 
 <a name="conclusion"></a>
 ## Conclusion (5 mins)

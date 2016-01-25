@@ -116,7 +116,7 @@ To do this, we will be using a Dialog, which brings a popup over the screen, cau
 ***
 
 <a name="guided-practice"></a>
-## Guided Practice: Topic (10 mins)
+## Guided Practice: Countdown Timer (10 mins)
 
 We are going to be making a basic countdown timer app that is only timing while the initial activity is running. When we switch to another activity, we will pause the time until we return to the first activity.
 
